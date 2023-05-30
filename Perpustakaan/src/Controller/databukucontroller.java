@@ -27,7 +27,7 @@ public class databukucontroller {
     public void isitabel(){
         db = implbuku.getAll();
         modeltabel mp = new modeltabel(db);
-        frame.gettabelBuku().setModel(mp);
+        
     }
     
     public void insert(){
@@ -37,8 +37,6 @@ public class databukucontroller {
         db.setPenulis(frame.getJTxtpenulis().getText());
         db.setPenerbit(frame.getJTxtpenerbit().getText());
         db.setLokasi(frame.getJTxtlokasi().getText());
-        db.setStock(frame.getJTxtstock().getText());
-        implbuku.insert(dp);
     }
     
     public void update(){
@@ -48,14 +46,10 @@ public class databukucontroller {
         db.setPenulis(frame.getJTxtpenulis().getText());
         db.setPenerbit(frame.getJTxtpenerbit().getText());
         db.setLokasi(frame.getJTxtlokasi().getText());
-        db.setStock(frame.getJTxtstock().getText());
-        db.setId(integer.parseInt(frame.getJTxtid()));
-        implbuku.update(dp);
     }
     
     public void delete(){
-        int id = integer.parseInt(frame.getJTxtid().getText());
-            implbuku.delete(id);
+      
     }
     
     public void cari (){
@@ -65,10 +59,9 @@ public class databukucontroller {
         db.setPenulis(frame.getJTxtpenulis().getText());
         db.setPenerbit(frame.getJTxtpenerbit().getText());
         db.setLokasi(frame.getJTxtlokasi().getText());
-        db.setStock(frame.getJTxtstock().getText());
-        db.setId(integer.parseInt(frame.getJTxtid()));
-            implbuku.update(dp);
+
     }
     
     
 }
+
